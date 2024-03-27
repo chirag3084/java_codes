@@ -10,7 +10,7 @@ public class P4 {
 
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("The values of pound (kilogram) is : ");
+        System.out.println("The values of pound (kilogram) is : ");
         pound = sc.nextFloat();
         System.out.println("The vales of inches (meter) is : ");
         inches = sc.nextFloat();
