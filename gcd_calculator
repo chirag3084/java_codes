@@ -1,0 +1,28 @@
+package prac;
+import java.util.Scanner;
+
+class gcd {
+
+    public static int gcd(int num1, int num2) {
+        int gcd;
+        int i;
+        for(i = 1;i<num1,i<num2;i++){
+            if(num1%i == 0 && num2%i == 0)
+        }
+        return num1/num2;
+    }
+}
+public class t1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number : ");
+        int x = sc.nextInt();
+        System.out.println("Enter the second number : ");
+        int y = sc.nextInt();
+        
+        gcd g = new gcd();
+        int z = g.gcd(x,y);
+        System.out.println("The gcd is"+z);
+
+    }
+}
