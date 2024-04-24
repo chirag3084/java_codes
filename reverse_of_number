@@ -14,8 +14,13 @@ public class h1 {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your first number : ");
-        int x = sc.nextInt();
-        reverse(x);
+        int a[] = new int[10];
+        for(int i = 1;i<= a.length;i++){
+            System.out.println("Enter a  number : ");
+            a[i] = sc.nextInt();
+        }
+        for(int i=1;i<=a.length;i++){
+            reverse(a[i]);
+        }
     }
 }
