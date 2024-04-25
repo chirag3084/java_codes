@@ -9,7 +9,7 @@ public class P3 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the value of meter : ");
         meter = sc.nextInt();
-        feet = (float) (2.38 * meter);
+        feet = (float) (3.28 * meter);
         System.out.print("feet = ");
         System.out.println(feet);
     }
