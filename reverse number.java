@@ -1,20 +1,14 @@
-import java.util.Scanner;
-
-public class practicle_10_reverse_number {
-      public static void rev(int n,int[] num1){
-        for(int i = n-1;i >= 0;i--){
-            System.out.println(num1[i]);
-        }
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        practicle_10_reverse_number p1 = new practicle_10_reverse_number();
-        System.out.println("enter the 10 numbers");
-        int n = 10;
-        int[] a = new int[10];
-        for(int i = 0;i<a.length;i++){
-            a[i]=sc.nextInt();
-        }
-            p1.rev(n,a);
-    }
-}
+public class reverse  
+{  
+public static void main(String[] args)   
+{  
+int number = 987654, reverse = 0;  
+while(number != 0)   
+{  
+int remainder = number % 10;  
+reverse = reverse * 10 + remainder;  
+number = number/10;  
+}  
+System.out.println("The reverse number is : "+reverse );  
+}  
+}  
