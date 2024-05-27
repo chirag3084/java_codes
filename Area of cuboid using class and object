@@ -1,0 +1,24 @@
+package test;
+
+
+public class prac_14 {
+    int l1=8,h1=9,w1=5;
+    int l2 = 14,h2 = 12,w2 = 13;
+    int volume1(){
+        return l1*w1*h1;
+    }
+    int volume2(){
+        
+        return l2*w2*h2;
+    }
+    public static void main(String[] args) {
+        prac_14 b1 = new prac_14();
+        prac_14 b2 = new prac_14();
+        int a = b1.volume1();
+        int b = b2.volume2();
+        System.out.println("The volume of first box is "+a);
+        System.out.println("The volume of second box is "+b);
+
+    }
+
+}
