@@ -1,0 +1,43 @@
+package prac;
+import java.io.*;
+import java.net.*;
+
+public class P17 {
+    public static void main(String[] args) {
+        // Server side
+        Thread serverThread = new Thread(() -> {
+            try {
+                ServerSocket sc = new ServerSocket(5000);
+                System.out.println("Server started. Waiting for client...");
+
+                Socket clientSocket = sc.accept();
+                System.out.println("Client connected.");
+
+                DataInputStream in = new DataInputStream(clientSocket.getInputStream());
+                String receivedData = in.readUTF();
+                System.out.println("Received from client: " + receivedData);
+
+                sc.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        // Client side
+        Thread clientThread = new Thread(() -> {
+            try {
+                Socket socket = new Socket("127.0.0.1", 5000);
+                DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+
+                String dataToSend = "Hello, server!";
+                out.writeUTF(dataToSend);
+                System.out.println("Sent to server: " + dataToSend);
+
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        serverThread.start();
+        clientThread.start();
+    }
+}
