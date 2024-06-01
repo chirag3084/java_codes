@@ -1,0 +1,41 @@
+package prac;
+class P12 {
+    int l = 12, b = 45;
+    double h = 6.0;
+    double x = 5.0, r = 10;
+    double a = 0.5;
+    float z = (int) 3.14;
+    double k = z * r * r;
+    double v = a * x * h;
+
+    int area(int l){
+        return l*l;
+    }
+
+    int area(int l, int b) {
+        return l * b;
+    }
+
+    void area(double a,double x,double h) {
+        System.out.println("area of tringle :"+(a*x*h));
+    }
+
+    void area(double k) {
+        System.out.println("Area of the circle: " + k);
+    }
+
+    public static void main(String[] args) {
+        P12 rec = new P12();
+        P12 sq = new P12();
+        int f = sq.area(sq.l);
+        System.out.println("Area of square : "+ f);
+
+        int rectangleArea = rec.area(rec.l, rec.b);
+        rec.area(rec.a,rec.x,rec.h);
+
+
+        System.out.println("Area of the rectangle: " + rectangleArea);
+
+        rec.area(rec.k);
+    }
+}
